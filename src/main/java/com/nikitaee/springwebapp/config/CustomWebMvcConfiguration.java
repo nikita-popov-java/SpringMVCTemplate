@@ -5,9 +5,13 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.type.AnnotationMetadata;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
+import org.springframework.web.servlet.resource.ResourceUrlEncodingFilter;
 import org.thymeleaf.spring6.SpringTemplateEngine;
 import org.thymeleaf.spring6.templateresolver.SpringResourceTemplateResolver;
 import org.thymeleaf.spring6.view.ThymeleafViewResolver;
@@ -29,6 +33,7 @@ public class CustomWebMvcConfiguration extends WebMvcConfigurationSupport {
 
         springResourceTemplateResolver.setPrefix("/WEB-INF/views/");
         springResourceTemplateResolver.setSuffix(".html");
+        springResourceTemplateResolver.setCharacterEncoding("UTF-8");
 
         return springResourceTemplateResolver;
     }
@@ -46,7 +51,10 @@ public class CustomWebMvcConfiguration extends WebMvcConfigurationSupport {
     @Override
     protected void configureViewResolvers(ViewResolverRegistry registry) {
         ThymeleafViewResolver resolver = new ThymeleafViewResolver();
+
         resolver.setTemplateEngine(springTemplateEngine());
+        resolver.setCharacterEncoding("UTF-8");
+        resolver.setContentType("text/html; charset=UTF-8");
 
         registry.viewResolver(resolver);
     }

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Otters!!</title>
+</head>
+<body>
+<h1>Hello! We are showing otters! Click to interesting one for you and enjoy it!</h1>
+
+<ul>
+    <li th:each="otter : ${otters}">
+        <a th:href="@{/otters/{type} (type=${otter.getType()}) }"
+           th:text="${otter.getType()}">
+            OTTER TYPE NAME
+        </a>
+    </li>
+</ul>
+</body>
+</html>
