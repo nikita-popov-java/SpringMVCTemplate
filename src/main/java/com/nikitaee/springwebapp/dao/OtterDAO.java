@@ -38,8 +38,8 @@ public class OtterDAO {
 
     public Otter show(String type) {
         return otters.stream()
-                .filter(o -> o.getType().equals(type))
-                .findAny().
-                orElse(null);
+                .filter(o -> o.getType().equalsIgnoreCase(type))
+                .findAny()
+                .orElse(null);
     }
 }

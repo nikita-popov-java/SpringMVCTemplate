@@ -16,11 +16,11 @@ public class OttersController {
         this.otterDAO = otterDAO;
     }
 
-    @GetMapping("")
+    @GetMapping()
     public String index(Model model) {
 
         model.addAttribute("otters", otterDAO.index());
-
+        System.out.println(otterDAO.index());
         return "otters/index";
     }
 
@@ -29,6 +29,7 @@ public class OttersController {
 
         model.addAttribute("otterType", otterDAO.show(type));
 
+        System.out.println(otterDAO.show(type));
         return "otters/show";
     }
 }

@@ -1,8 +1,8 @@
-Rechnaya;8;63;https://www.krasnouhie.ru/wp-content/uploads/2018/07/68833.jpg
-Sumatranskaya;5;66;https://www.krasnouhie.ru/wp-content/uploads/2018/07/589322.jpg
-Aziatskaya;3;45;https://www.krasnouhie.ru/wp-content/uploads/2018/07/890-07.jpg
-Gigantskaya;26;145;https://www.krasnouhie.ru/wp-content/uploads/2018/07/80054.jpg
-Kalan;26;130;https://www.krasnouhie.ru/wp-content/uploads/2018/07/78999.jpg
-Koshachya;4;96;https://www.krasnouhie.ru/wp-content/uploads/2018/07/58223.jpg
-Kongolezskaya;20;80;https://www.krasnouhie.ru/wp-content/uploads/2018/07/87642.jpg
-Milaya;7;135;https://www.treehugger.com/thmb/Etyf_aXMc0YDGL6pf0Y7pOlHxbo=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__mnn__images__2015__09__river-otters-lead-photo-86eef01e35714da9a6dd974f321e3504.jpg
+Речная;8;63;https://www.krasnouhie.ru/wp-content/uploads/2018/07/68833.jpg
+Суматранская;5;66;https://www.krasnouhie.ru/wp-content/uploads/2018/07/589322.jpg
+Азиатская;3;45;https://www.krasnouhie.ru/wp-content/uploads/2018/07/890-07.jpg
+Гигантская;26;145;https://www.krasnouhie.ru/wp-content/uploads/2018/07/80054.jpg
+Калан;26;130;https://www.krasnouhie.ru/wp-content/uploads/2018/07/78999.jpg
+Кошачья;4;96;https://www.krasnouhie.ru/wp-content/uploads/2018/07/58223.jpg
+Конголезская;20;80;https://www.krasnouhie.ru/wp-content/uploads/2018/07/87642.jpg
+Милая;7;135;https://www.treehugger.com/thmb/Etyf_aXMc0YDGL6pf0Y7pOlHxbo=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/__opt__aboutcom__coeus__resources__content_migration__mnn__images__2015__09__river-otters-lead-photo-86eef01e35714da9a6dd974f321e3504.jpg
