@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Создайте новую выдру!</title>
+</head>
+<body>
+<form th:method="POST" th:action="@{/otters}" th:object="${otter}">
+    <label th:text="@{Введите название типа выдры: }" for="otterType"></label>
+    <input th:type="text" th:placeholder="@{Милашка}" id="otterType" th:field="*{type}">
+
+    <br>
+
+    <label th:text="@{Введите средний вес выдры: }" for="otterWeight"></label>
+    <input th:type="number" th:placeholder="@{10}" id="otterWeight" th:field="*{averageWeight}">
+
+    <br>
+
+    <label th:text="@{Введите среднюю длину выдры: }" for="otterLength"></label>
+    <input th:type="number" th:placeholder="@{100}" id="otterLength" th:field="*{averageLength}">
+
+    <br>
+
+    <label th:text="@{Введите адрес картинки выдры: }" for="otterImage"></label>
+    <input th:type="text" th:placeholder="@{https://google.com}" id="otterImage" th:field="*{photoName}">
+
+    <br>
+
+    <input type="submit" value="Создать">
+</form>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:method="PUT" th:action="@{/otters/{type}(type=${otter.getType()})}" th:object="${otter}">
+    <label for="otterType">Введите название типа выдры: </label>
+    <input th:type="text"
+           id="otterType"
+           th:field="*{type}">
+    <p th:if="${#fields.hasErrors('type')}"
+          th:errors="*{type}">type error</p>
+
+    <br>
+
+    <label for="otterWeight">Введите средний вес выдры:</label>
+    <input th:type="number"
+           id="otterWeight"
+           th:field="*{averageWeight}">
+    <p th:if="${#fields.hasErrors('averageWeight')}"
+          th:errors="*{averageWeight}">averageWeight error</p>
+
+    <br>
+
+    <label for="otterLength">Введите среднюю длину выдры: </label>
+    <input th:type="number" th:placeholder="@{100}" id="otterLength" th:field="*{averageLength}">
+    <p th:if="${#fields.hasErrors('averageLength')}"
+          th:errors="*{averageLength}">averageLength error</p>
+
+    <br>
+
+    <label for="otterImage">Введите адрес картинки выдры: </label>
+    <input th:type="text" th:placeholder="@{https://google.com}" id="otterImage" th:field="*{photoName}">
+    <p th:if="${#fields.hasErrors('photoName')}"
+          th:errors="*{photoName}">photoName error</p>
+
+    <br>
+
+    <input type="submit" value="Обновить">
+</form>
+</body>
+</html>

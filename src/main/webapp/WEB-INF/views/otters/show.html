@@ -2,12 +2,21 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title th:text="@{{type} otter(type = ${otterType.getType()})}">OTTER TYPE</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title th:text="${otterType.getType()} + ' выдра'"></title>
 </head>
 <body>
-    <img th:src="${otterType.getPhotoName()}"/>
+    <img style="width: 500px;" th:src="${otterType.getPhotoName()}"/>
     <h2 th:text="${otterType.getType()}">OTTER TYPE NAME</h2>
-    <p th:text="@{Average weight is {weight}(weight = ${otterType.getAverageWeight()})}">OTTER WEIGHT</p>
-    <p th:text="@{Average length is {length}(length = ${otterType.getAverageLength()})}">OTTER LENGTH</p>
+    <p th:text="@{Средний вес выдры {weight}(weight = ${otterType.getAverageWeight()})}">OTTER WEIGHT</p>
+    <p th:text="@{Средняя длина выдры {length}(length = ${otterType.getAverageLength()})}">OTTER LENGTH</p>
+    <br>
+    <button>
+        <a th:href="@{/otters/{type}/edit(type=${otterType.getType()})}">Редактировать информацию о выдре</a>
+    </button>
+    <br>
+    <form th:action="@{/otters/{type}(type=${otterType.getType()})}" th:method="DELETE">
+        <input type="submit" value="Удалить выдру">
+    </form>
 </body>
 </html>
