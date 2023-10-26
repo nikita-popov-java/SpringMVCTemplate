@@ -2,18 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Выдры!!</title>
+    <title>Выдры</title>
 </head>
 <body>
 <h1>Hello! We are showing otters! Click to interesting one for you and enjoy it!</h1>
 
 <ul>
     <li th:each="otter : ${otters}">
-        <a th:href="@{/otters/{type} (type=${otter.getType()}) }"
+        <a th:href="@{/otters/{type} (type=${otter.getType().toLowerCase()}) }"
            th:text="${otter.getType()}">
             OTTER TYPE NAME
         </a>
     </li>
 </ul>
+<br>
+<button>
+    <a th:href="@{/otters/new}">Создать новую выдру</a>
+</button>
 </body>
 </html>
