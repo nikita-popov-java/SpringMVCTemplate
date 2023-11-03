@@ -1,0 +1,4 @@
+postgre.address=
+postgre.driver.class=
+postgre.admin.login=
+postgre.admin.password=
