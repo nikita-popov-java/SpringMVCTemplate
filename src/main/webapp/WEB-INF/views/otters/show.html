@@ -12,7 +12,7 @@
     <p th:text="@{Средняя длина выдры {length}(length = ${otterType.getAverageLength()})}">OTTER LENGTH</p>
     <br>
     <button>
-        <a th:href="@{/otters/{type}/edit(type=${otterType.getType()})}">Редактировать информацию о выдре</a>
+        <a th:href="@{/otters/{type}/edit(type=${otterType.getType().toLowerCase()})}">Редактировать информацию о выдре</a>
     </button>
     <br>
     <form th:action="@{/otters/{type}(type=${otterType.getType()})}" th:method="DELETE">

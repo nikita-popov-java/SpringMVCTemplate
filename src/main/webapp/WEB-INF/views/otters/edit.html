@@ -17,6 +17,7 @@
 
     <label for="otterWeight">Введите средний вес выдры:</label>
     <input th:type="number"
+           required="required"
            id="otterWeight"
            th:field="*{averageWeight}">
     <p th:if="${#fields.hasErrors('averageWeight')}"
@@ -25,14 +26,20 @@
     <br>
 
     <label for="otterLength">Введите среднюю длину выдры: </label>
-    <input th:type="number" th:placeholder="@{100}" id="otterLength" th:field="*{averageLength}">
+    <input th:type="number"
+           required="required"
+           id="otterLength"
+           th:field="*{averageLength}">
     <p th:if="${#fields.hasErrors('averageLength')}"
           th:errors="*{averageLength}">averageLength error</p>
 
     <br>
 
     <label for="otterImage">Введите адрес картинки выдры: </label>
-    <input th:type="text" th:placeholder="@{https://google.com}" id="otterImage" th:field="*{photoName}">
+    <input th:type="text"
+           th:placeholder="@{https://google.com}"
+           id="otterImage"
+           th:field="*{photoName}">
     <p th:if="${#fields.hasErrors('photoName')}"
           th:errors="*{photoName}">photoName error</p>
 

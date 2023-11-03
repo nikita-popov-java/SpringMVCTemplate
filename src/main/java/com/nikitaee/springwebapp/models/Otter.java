@@ -2,19 +2,24 @@ package com.nikitaee.springwebapp.models;
 
 import jakarta.validation.constraints.*;
 import org.hibernate.validator.constraints.URL;
+import org.springframework.format.annotation.NumberFormat;
 
 public class Otter implements Cloneable{
 
     @NotNull
     @Size(min = 2, max = 20, message = "Некорректный тип выдры!")
+    @NotBlank
     private String type;
     @Positive(message = "Вес выдры не может быть неположительным!")
     @Max(value = 100, message = "Выдр такого веса не бывает!")
+    @NotBlank
     private int averageWeight;
     @Positive(message = "Длина выдры не может быть не положительной!")
     @Max(value = 200, message = "Выдр такой длины не бывает!")
+    @NotBlank
     private int averageLength;
     @URL(message = "Поле должно содерджать ссылку на фото!")
+    @NotBlank
     private String photoName;
 
     public Otter() {
